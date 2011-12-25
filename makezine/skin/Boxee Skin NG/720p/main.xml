@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<window type="window" id="14000">
+  <defaultcontrol always="true">100</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    <control type="group">
+	
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1280</width>
+        <height>720</height>
+        <texture>bg.png</texture>
+      </control>
+	  
+      <control type="button" id="100">
+        <onleft>105</onleft>
+        <onright>101</onright>
+        <onup>-</onup>
+        <ondown>1000</ondown>
+        <posx>40</posx>
+        <posy>152</posy>
+        <width>196</width>
+        <height>30</height>
+        <label>All</label>
+        <font>font21b</font>
+        <textoffsetx>85</textoffsetx>
+        <textoffsety>1</textoffsety>
+        <textcolor>white</textcolor>
+        <focusedcolor>FF71B50A</focusedcolor>
+        <texturefocus>green2.png</texturefocus>
+        <texturenofocus>green.png</texturenofocus>
+        <visible>true</visible>
+        <onclick>Container.SetPath(1000,http://tinyurl.com/35t58m6)</onclick>
+      </control>
+	  
+      <control type="button" id="101">
+        <onleft>100</onleft>
+        <onright>102</onright>
+        <onup>-</onup>
+        <ondown>1000</ondown>
+        <posx>241</posx>
+        <posy>152</posy>
+        <width>196</width>
+        <height>30</height>
+        <label>Weekend Projects</label>
+        <font>font21b</font>
+        <textoffsetx>7</textoffsetx>
+        <textoffsety>1</textoffsety>
+        <textcolor>white</textcolor>
+        <focusedcolor>FFD81630</focusedcolor>
+        <texturefocus>red2.png</texturefocus>
+        <texturenofocus>red.png</texturenofocus>
+        <visible>true</visible>
+        <onclick>Container.SetPath(1000,http://tinyurl.com/33ce3ag)</onclick>
+      </control>
+	  
+      <control type="button" id="102">
+        <onleft>101</onleft>
+        <onright>103</onright>
+        <onup>-</onup>
+        <ondown>1000</ondown>
+        <posx>442</posx>
+        <posy>152</posy>
+        <width>196</width>
+        <height>30</height>
+        <label>Collin's Lab</label>
+        <font>font21b</font>
+        <textoffsetx>37</textoffsetx>
+        <textoffsety>1</textoffsety>
+        <textcolor>white</textcolor>
+        <focusedcolor>FF578092</focusedcolor>
+        <texturefocus>blue2.png</texturefocus>
+        <texturenofocus>blue.png</texturenofocus>
+        <visible>true</visible>
+        <onclick>Container.SetPath(1000,http://tinyurl.com/36h3dt7)</onclick>
+      </control>
+	  
+      <control type="button" id="103">
+        <onleft>102</onleft>
+        <onright>104</onright>
+        <onup>-</onup>
+        <ondown>1000</ondown>
+        <posx>643</posx>
+        <posy>152</posy>
+        <width>196</width>
+        <height>30</height>
+        <label>Craft</label>
+        <font>font21b</font>
+        <textoffsetx>72</textoffsetx>
+        <textoffsety>1</textoffsety>
+        <textcolor>white</textcolor>
+        <focusedcolor>FFE18329</focusedcolor>
+        <texturefocus>orange2.png</texturefocus>
+        <texturenofocus>orange.png</texturenofocus>
+        <visible>true</visible>
+        <onclick>Container.SetPath(1000,http://tinyurl.com/3anucww)</onclick>
+      </control>
+	  
+      <control type="button" id="104">
+        <onleft>103</onleft>
+        <onright>105</onright>
+        <onup>-</onup>
+        <ondown>1000</ondown>
+        <posx>844</posx>
+        <posy>152</posy>
+        <width>196</width>
+        <height>30</height>
+        <label>Maker Faire</label>
+        <font>font21b</font>
+        <textoffsetx>42</textoffsetx>
+        <textoffsety>1</textoffsety>
+        <textcolor>white</textcolor>
+        <focusedcolor>FF004883</focusedcolor>
+        <texturefocus>darkblue2.png</texturefocus>
+        <texturenofocus>darkblue.png</texturenofocus>
+        <visible>true</visible>
+        <onclick>Container.SetPath(1000,http://tinyurl.com/6hhsy55)</onclick>
+      </control>
+	  
+      <control type="button" id="105">
+        <onleft>104</onleft>
+        <onright>100</onright>
+        <ondown>1000</ondown>
+        <onup>-</onup>
+        <posx>1044</posx>
+        <posy>152</posy>
+        <width>196</width>
+        <height>30</height>
+        <label>Search</label>
+        <font>font21b</font>
+        <textoffsetx>64</textoffsetx>
+        <textoffsety>1</textoffsety>
+        <textcolor>white</textcolor>
+        <focusedcolor>FF009999</focusedcolor>
+        <texturefocus>teal2.png</texturefocus>
+        <texturenofocus>teal.png</texturenofocus>
+        <visible>true</visible>
+        <onclick lang="python">
+<![CDATA[import tinyapi
+result = tinyapi.search()
+"""mc.ShowDialogNotification(result)"""]]>
+        </onclick>
+      </control>
+	  
+      <control type="multiimage">
+        <visible>Container(1000).IsLoading + !Window.IsVisible(DialogProgress.xml)</visible>
+        <posx>540</posx>
+        <posy>350</posy>
+        <width>200</width>
+        <height>20</height>
+        <imagepath>loading</imagepath>
+        <timeperimage>25</timeperimage>
+        <fadetime>0.5</fadetime>
+        <loop>yes</loop>
+        <randomize>false</randomize>
+        <colordiffuse>F3FFC029</colordiffuse>
+      </control>
+	  
+      <control type="list" id="1000">
+        <onup>100</onup>
+        <onleft>100</onleft>
+        <onright>105</onright>
+        <posx>79</posx>
+        <posy>304</posy>
+        <width>520</width>
+        <height>345</height>
+        <orientation>vertical</orientation>
+        <itemlayout width="520" height="50">
+		
+          <control type="label">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>520</width>
+            <height>50</height>
+            <font>font30</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>black</textcolor>
+          </control>
+		  
+        </itemlayout>
+        <focusedlayout width="520" height="50">
+		
+          <control type="image">
+            <visible>Control.HasFocus(1000)</visible>
+            <posx>0</posx>
+            <posy>5</posy>
+            <width>520</width>
+            <height>35</height>
+            <texture>white.png</texture>
+            <colordiffuse>F3FFF82F</colordiffuse>
+          </control>
+		  
+          <control type="label">
+            <visible>!Control.HasFocus(1000)</visible>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>520</width>
+            <height>50</height>
+            <font>font30</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>black</textcolor>
+            <selectedcolor>F3FFF82F</selectedcolor>
+          </control>
+		  
+          <control type="label">
+            <visible>Control.HasFocus(1000)</visible>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>520</width>
+            <height>50</height>
+            <font>font30</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>black</textcolor>
+            <selectedcolor>F3FFF82F</selectedcolor>
+            <scroll>true</scroll>
+            <scrollspeed>30</scrollspeed>
+          </control>
+		  
+        </focusedlayout>
+        <content type="url" url="http://tinyurl.com/35t58m6"></content>
+      </control>
+	  
+      <control type="group">
+        <animation type="Conditional" condition="Window.IsVisible(DialogProgress.xml)">
+          <effect type="fade" start="100" end="20" time="200"/>
+        </animation>
+		
+        <control type="image">
+          <visible>true</visible>
+          <posx>790</posx>
+          <posy>295</posy>
+          <width>300</width>
+          <height>210</height>
+          <texture>$INFO[Container(1000).ListItem.Thumb]</texture>
+        </control>
+		
+        <control type="label">
+          <visible>true</visible>
+          <posx>730</posx>
+          <posy>515</posy>
+          <width>420</width>
+          <height>140</height>
+          <font>light23</font>
+          <align>left</align>
+          <aligny>top</aligny>
+          <label>$INFO[Container(1000).ListItem.property(description)]</label>
+          <background>grey</background>
+          <textcolor>black</textcolor>
+          <wrapmultiline>true</wrapmultiline>
+        </control>
+		
+      </control>
+    </control>
+  </controls>
+</window>

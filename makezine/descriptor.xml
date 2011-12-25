@@ -1,0 +1,15 @@
+<app>
+  <id>makezine</id>
+  <name>Make: Videos</name>
+  <version>1.20</version>
+  <description>An easy way to access Make's video library!</description>
+  <thumb>http://armyof4.com/makezine/images/thumb.png</thumb>
+  <repository>http://dir.boxee.tv/apps</repository>
+  <media>video</media>
+  <copyright>Kevin E Roof</copyright>
+  <email>kevin@workshop88.com</email>
+  <type>skin</type>
+  <startWindow>14000</startWindow>
+  <platform>all</platform>
+  <minversion>0.9.11</minversion>
+</app>
